@@ -1,0 +1,91 @@
+<html>
+<head>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <!-- jQuery library -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <!-- Popper JS -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+   <!-- Latest compiled JavaScript -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+   <style>
+      .box {
+         background-color: #6b8ba4;
+         font-size: 3em;
+         height: 200px;
+         position: relative;
+         overflow: hidden;
+      }
+
+      .row {
+         position: absolute;
+         top: 100%;
+         color: rgb(255, 255, 255, 0);
+         animation-name: goUp;
+         animation-duration: 1s;
+         animation-timing-function: linear;
+         animation-fill-mode: forwards;
+      }
+
+      @keyframes goUp {
+         from {top: 100%; color: rgb(255, 255, 255, 0);}
+         to {top: 0%; color: rgb(255, 255, 255, 1);}
+      }
+   </style>
+</head>
+
+<body>
+
+   <div class="box">
+      <div class="row w-100 h-100 align-items-center">
+         <div class="col text-center">
+            <h1 data-to="36" data-key="years"></h1>
+            <h5>years in business</h5>
+         </div>
+         <div class="col text-center">
+            <h1 data-to="53624" data-key="purchases"></h1>
+            <h5>homes purchased</h5>
+         </div>
+         <div class="col text-center">
+            <h1 data-to="1003091" data-key="appraisals"></h1>
+            <h5>home appraisals completed</h5>
+         </div>
+      </div>
+   </div>
+
+   <script>
+
+      let intervalArray = [];
+
+      function stopCounter(intervalID) {
+         clearInterval(intervalArray[intervalID]);
+      }
+
+      function startCounter() {
+         document.querySelectorAll('h1').forEach((item) => {
+            let start = 0;
+            let end = Number(item.getAttribute('data-to'));
+            item.innerHTML = start;
+            let interval = setInterval(
+               () => {
+                  if (start < end) {
+                     start += Math.ceil(end / 100);
+                     item.innerHTML = start.toLocaleString();
+                  } else if (start > end) {
+                     start = end;
+                     item.innerHTML = end.toLocaleString();
+                  } else if (start === end) {
+                     stopCounter(item.getAttribute('data-key'));
+                  }
+               }, end < 100 ? 50 : 18
+            );
+            intervalArray[item.getAttribute('data-key')] = interval;
+         })
+      };
+
+      startCounter();
+      
+   </script>
+
+</body>
+</html>

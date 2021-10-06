@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Shapes</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+
+        * {box-sizing: border-box;}
+
+        div {
+            background: #555; 
+            margin: 15px; 
+            display: inline-block;
+        }
+
+        .square {
+            width: 50px;
+            height: 50px;
+        }
+
+        .circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .oval {
+            width: 100px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .trapezoid {
+            background: none;
+            border-bottom: 50px solid #555;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            height: 0;
+            width: 125px;
+        }
+
+        .rectangle {
+            height: 50px;
+            width: 100px;
+        }
+
+        .parallelogram {
+            width: 100px;
+            height: 50px;
+            transform: skew(20deg);
+        }
+
+        .tr-up {
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-bottom: 50px solid #555;
+            background: none;
+        }
+
+        .tr-down {
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-top: 50px solid #555;
+            background: none;
+        }
+
+        .tr-left {
+            width: 0;
+            height: 0;
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+            border-right: 50px solid #555;
+            background: none;
+        }
+
+        .tr-right {
+            width: 0;
+            height: 0;
+            border-bottom: 25px solid transparent;
+            border-top: 25px solid transparent;
+            border-left: 50px solid #555;
+            background: none;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="square"></div>
+    <div class="circle"></div>
+    <div class="oval"></div>
+    <div class="trapezoid"></div>
+    <div class="rectangle"></div>
+    <div class="parallelogram"></div>
+    <div class="tr-up"></div>
+    <div class="tr-down"></div>
+    <div class="tr-left"></div>
+    <div class="tr-right"></div>
+
+</body>
+
+</html>

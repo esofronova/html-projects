@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Dark Mode</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+
+        * {box-sizing: border-box;}
+
+        body {
+            padding: 25px;
+            background: white;
+            color: black;
+            font-size: 25px;
+        }
+
+        button {cursor: pointer;}
+
+        .dark-mode {
+            background: black;
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h2>Toggle Dark/Light Mode</h2>
+    <p>Click the button to toggle between dark and light mode.</p>
+
+    <button onclick="myFunction()">Toggle dark mode</button>
+
+    <script>
+
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+
+    </script>
+
+</body>
+
+</html>

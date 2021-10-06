@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Tree</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+
+        * {box-sizing: border-box;}
+
+        ul {list-style-type: none;}
+
+        .arrow {
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .arrow::before {
+            content: "\25B6";
+            display: inline-block;
+            margin-right: 6px;
+        }
+
+        .arrow-down::before {transform: rotate(90deg);}
+
+        .hidden {display: none;}
+
+        .active {display: block;}
+
+    </style>
+</head>
+
+<body>
+
+    <ul>
+        <li><span class="arrow">Beverages</span>
+            <ul class="hidden">
+                <li>Water</li>
+                <li>Coffee</li>
+                <li><span class="arrow">Tea</span>
+                    <ul class="hidden"> 
+                        <li>Black Tea</li>
+                        <li>White Tea</li>
+                        <li><span class="arrow">Green Tea</span>
+                            <ul class="hidden">
+                                <li>Sencha</li>
+                                <li>Gyokuro</li>
+                                <li>Matcha</li>
+                                <li>Pi Lo Chun</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <script>
+
+        var toggler = document.getElementsByClassName("arrow");
+        var i;
+
+        for (i = 0; i < toggler.length; i++) {
+            toggler[i].addEventListener("click", function() {
+                this.parentElement.querySelector(".hidden").classList.toggle("active");
+                this.classList.toggle("arrow-down");
+            });
+        }
+
+    </script>
+
+</body>
+
+</html>

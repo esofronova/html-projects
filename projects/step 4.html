@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+
+<head>
+    <title></title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .box {
+            width: 500px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+            position: relative;
+            margin: 30px 0 0 30px;
+        }
+
+        .line {
+            position: absolute;
+            background: rgb(167, 167, 167);
+            height: 5px;
+            top: 25px;
+            width: 500px;
+        }
+
+        .circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgb(142, 206, 69);
+            text-align: center;
+            color: white;
+            font-size: 25px;
+            line-height: 50px;
+            z-index: 1;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    
+    <div class="box">
+
+        <div class="line"></div>
+        
+        <div class="circle">1</div>
+        <div class="circle">2</div>
+        <div class="circle">3</div>
+        <div class="circle" style="background: rgb(158, 21, 158);">4</div>
+        <div class="circle" style="background: rgb(167, 167, 167); color: black;">5</div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Practice</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+
+        fieldset {
+            width: 650px;
+            background: rgb(245, 252, 183);
+            border: 2px solid gray;
+            padding: 30px;
+            font-size: 18px;
+            background-image: url(http://htmlbook.ru/files/check-bg.png);
+            background-repeat: no-repeat;
+            background-origin: content-box;
+        }
+
+        input {
+            margin-left: 150px;
+        }
+
+        .btn {
+            color: white;
+            background: rgb(204, 151, 81);
+            border: 1px solid white;
+            padding: 3px 8px;
+        }
+
+        .btn:focus {
+            outline: none;
+        }
+
+        .btn:hover {
+            background: rgb(255, 189, 102);
+        }
+
+        legend {
+            color: rgb(161, 99, 18);
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <fieldset>
+
+        <legend>Выбор варианта</legend>
+
+        <h3>Какой раздел психологии изучает познавательные процессы человеческого сознания?</h3>
+
+        <input type="radio" name="psycho">
+        <label for="psycho">Психоанализ</label>
+        
+        <br> <br>
+
+        <input type="radio" name="bih">
+        <label for="bih">Бихевиоризм</label>
+
+        <br> <br>
+
+        <input type="radio" name="cog">
+        <label for="cog">Когнитивная психология</label>
+
+        <br> <br>
+
+        <input type="radio" name="gum">
+        <label for="gum">Гуманистическая психология</label>
+
+        <br> <br>
+
+        <input type="radio" name="gesh">
+        <label for="gesh">Гештальт-психология</label>
+
+        <br> <br>
+
+        <input type="submit" value="Ответить" class="btn">
+
+    </fieldset>
+
+</body>
+
+</html>

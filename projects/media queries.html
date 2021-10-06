@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+<head>
+    <title></title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .row {
+            /* border: 3px solid lime; */
+            display: flex;
+        }
+
+        .div1, .div2 {
+            /* border: 3px solid black; */
+            height: 300px;
+            margin: 0;
+        }
+
+        .div1 {
+            width: 25%;
+            background-color: aqua;
+        }
+
+        .div2 {
+            width: 75%;
+            background-color: palevioletred;
+        }
+
+        @media screen and (max-width: 900px) {
+
+            .div1 { background-color: greenyellow; }
+            .div2 { background-color: purple; }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="row">
+
+        <div class="div1"></div>
+        <div class="div2"></div>
+
+    </div>
+
+</body>
+
+</html>

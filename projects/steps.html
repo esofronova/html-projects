@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Steps</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+
+        .row {
+            display: flex;
+        }
+
+        .step {
+            height: 30px;
+            width: 120px;
+            text-align: center;
+            line-height: 30px;
+            background-image: linear-gradient(lightgray,gray, lightgray);
+            font-size: 20px;
+            position: relative;
+        }
+
+        .step::after {
+            content: "";
+            border-left: 8px solid transparent;
+            border-top: 15px solid white;
+            border-bottom: 15px solid white;
+            position: absolute;
+            right: 0;
+        }
+
+        .step::before {
+            content: "";
+            border-left: 8px solid white;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            position: absolute;
+            left: 0;
+        }
+
+        .active, .step:hover {
+            background-image: linear-gradient(rgb(198, 255, 172), rgb(135, 199, 106), rgb(198, 255, 172));
+            color: white;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="step">Шаг 1</div>
+        <div class="step active">Шаг 2</div>
+        <div class="step">Шаг 3</div>
+        <div class="step">Шаг 4</div>
+    </div>
+
+</body>
+</html>

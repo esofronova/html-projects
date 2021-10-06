@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Practice</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://kit.fontawesome.com/1f4c072dbf.js" crossorigin="anonymous"></script>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+
+        * {box-sizing: border-box;}
+
+        h1 {
+            text-align: center;
+            color: teal;
+            font-size: 50px;
+        }
+
+        .box {
+            margin: auto;
+            background: darkblue;
+            color: white;
+            padding: 40px 80px;
+            border-radius: 25px;
+            width: 80%;
+            font-size: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .row {
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            color: white;
+            background: red;
+            border-radius: 25px;
+            border: none;
+            padding: 5px 10px;
+            font-size: 25px;
+            cursor: pointer;
+            width: 200px;
+            align-self: center;
+            margin-top: 25px;
+        }
+
+        input {
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Tip Calculator</h1>
+
+    <div class="box">
+        <form>
+            <div class="row">
+                <label for="bill">Bill Amount:</label>
+                <input type="text" id="bill">
+            </div>
+            <div class="row">
+                <label for="tip">Percentage Tip:</label>
+                <input type="text" id="tip">
+            </div>
+            <div class="row">
+                <label for="tipAmount">Tip Amount:</label>
+                <input type="text" id="tipAmount" disabled>
+            </div>
+            <div class="row">
+                <label for="total">Total:</label>
+                <input type="text" id="total" disabled>
+            </div>
+        </form>
+    
+        <button onclick="calculate()">Calculate</button>
+    </div>
+
+    <script>
+
+        function calculate() {
+            var bill = Number(document.getElementById("bill").value);
+            var tip = Number(document.getElementById("tip").value);
+            var tipAmount = 0;
+            var total = 0;
+
+            tipAmount = bill / 100 * tip;
+            total = bill + tipAmount;
+
+            document.getElementById("tipAmount").value = tipAmount;
+            document.getElementById("total").value = total;
+        }
+
+    </script>
+
+</body>
+</html>

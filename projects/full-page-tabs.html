@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Full Page Tabs</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+
+        body, html { 
+            font-family: Arial, Helvetica, sans-serif;
+            height: 100%;
+            margin: 0; 
+        }
+
+        .tabcontent {
+            color: white;
+            padding: 100px 20px;
+            height: 100%;
+            display: none;
+        }
+
+        #Home { background-color: red; }
+        #News { background-color: green; }
+        #Contact { background-color: blue; }
+        #About { background-color: orange; }
+
+        .tablink {
+            background-color: #555;
+            color: white;
+            font-size: 17px;
+            width: 25%;
+            float: left;
+            border: none;
+            outline: none;
+            padding: 14px 16px;
+            cursor: pointer;
+        }
+
+        .tablink:hover {
+            background-color: #777;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <button class="tablink" onclick="openTab('Home', this, 'red')" id="defaultOpen">Home</button>
+    <button class="tablink" onclick="openTab('News', this, 'green')">News</button>
+    <button class="tablink" onclick="openTab('Contact', this, 'blue')">Contact</button>
+    <button class="tablink" onclick="openTab('About', this, 'orange')">About</button>
+
+    <div id="Home" class="tabcontent">
+        <h1>Home</h1>
+        <p>Home is where the heart is...</p>
+    </div>
+
+    <div id="News" class="tabcontent">
+        <h1>News</h1>
+        <p>Some news this fine day!</p>
+    </div>
+
+    <div id="Contact" class="tabcontent">
+        <h1>Contact</h1>
+        <p>Get in touch, or swing by for a cup of coffee.</p>
+    </div>
+
+    <div id="About" class="tabcontent">
+        <h1>About</h1>
+        <p>Who we are and what we do.</p>
+    </div>
+
+    <script>
+
+        function openTab(tabName,elmnt,color) {
+            var i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+
+            document.getElementById(tabName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+
+    </script>
+
+</body>
+</html>

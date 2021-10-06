@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Practice</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 500px;
+            height: 30px;
+            border: 1px solid red;
+        }
+
+        .line {
+            background: red;
+            width: 0%;
+            height: 30px;
+            transition: all 2s linear;
+        }
+
+        .box:hover .line {
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <div class="line"></div>
+    </div>
+
+</body>
+</html>
