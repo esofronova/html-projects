@@ -2,63 +2,121 @@
 <html>
 
 <head>
-    <title>Steps</title>
+  <title>Steps</title>
 
-    <meta charset="utf-8" />
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <style>
+  <style>
+    h1 {
+      text-align: center;
+    }
+    
+    .row {
+      display: flex;
+    }
 
-        .row {
-            display: flex;
-        }
+    .step {
+      height: 30px;
+      width: 120px;
+      text-align: center;
+      line-height: 30px;
+      background-image: linear-gradient(lightgray, gray, lightgray);
+      font-size: 20px;
+      position: relative;
+    }
 
-        .step {
-            height: 30px;
-            width: 120px;
-            text-align: center;
-            line-height: 30px;
-            background-image: linear-gradient(lightgray,gray, lightgray);
-            font-size: 20px;
-            position: relative;
-        }
+    .step::after {
+      content: "";
+      border-left: 8px solid transparent;
+      border-top: 15px solid white;
+      border-bottom: 15px solid white;
+      position: absolute;
+      right: 0;
+    }
 
-        .step::after {
-            content: "";
-            border-left: 8px solid transparent;
-            border-top: 15px solid white;
-            border-bottom: 15px solid white;
-            position: absolute;
-            right: 0;
-        }
+    .step::before {
+      content: "";
+      border-left: 8px solid white;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      position: absolute;
+      left: 0;
+    }
 
-        .step::before {
-            content: "";
-            border-left: 8px solid white;
-            border-top: 15px solid transparent;
-            border-bottom: 15px solid transparent;
-            position: absolute;
-            left: 0;
-        }
+    .active,
+    .step:hover {
+      background-image: linear-gradient(rgb(198, 255, 172), rgb(135, 199, 106), rgb(198, 255, 172));
+      color: white;
+    }
 
-        .active, .step:hover {
-            background-image: linear-gradient(rgb(198, 255, 172), rgb(135, 199, 106), rgb(198, 255, 172));
-            color: white;
-        }
+    a {
+      padding: 10px 20px;
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+      border-right: 2px solid white;
+      border-radius: 0 30px 30px 0;
+      box-shadow: 2px 0 0 0 gray;
+    }
 
-    </style>
+    .box {
+      width: 500px;
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      position: relative;
+      margin-top: 2em;
+    }
+
+    .line {
+      position: absolute;
+      background: rgb(167, 167, 167);
+      height: 5px;
+      top: 25px;
+      width: 500px;
+    }
+
+    .circle {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgb(142, 206, 69);
+      text-align: center;
+      color: white;
+      font-size: 25px;
+      line-height: 50px;
+      z-index: 1;
+    }
+  </style>
 
 </head>
 
 <body>
+  <h1>Here are different variations of steps</h1>
+  <div class="row" style="margin-bottom: 2em; background-image: linear-gradient(white, rgb(168, 206, 81))">
+    <a href="#">Uno</a>
+    <a href="#">Dos</a>
+    <a href="#">Tres</a>
+    <a href="#">Quatro</a>
+  </div>
 
-    <div class="row">
-        <div class="step">Шаг 1</div>
-        <div class="step active">Шаг 2</div>
-        <div class="step">Шаг 3</div>
-        <div class="step">Шаг 4</div>
-    </div>
+  <div class="row">
+    <div class="step">Step 1</div>
+    <div class="step active">Step 2</div>
+    <div class="step">Step 3</div>
+    <div class="step">Step 4</div>
+  </div>
 
+  <div class="box">
+    <div class="line"></div>
+    <div class="circle">1</div>
+    <div class="circle">2</div>
+    <div class="circle">3</div>
+    <div class="circle" style="background: rgb(158, 21, 158);">4</div>
+    <div class="circle" style="background: rgb(167, 167, 167); color: black;">5</div>
+  </div>
 </body>
+
 </html>

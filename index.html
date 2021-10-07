@@ -2,7 +2,6 @@
 <html>
 
 <head>
-	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -38,17 +37,11 @@
 
 	<script>
 
-		const data = ['accordion', 'animated-counter', 'animated-menu-icon', 'animated-search', 'animated-sidebar', 'arrows', 'autocomplete', 'bootstrap-carousel', 'calculator', 'caps-lock-check', 'cascading-dropdown', 'cocktail-form', 'collapsible', 'contact-form', 'counter', 'custom-select', 'cutout-text', 'dark-mode', 'dropdown-menu', 'dropdown', 'flip-card', 'form', 'full-page-tabs', 'game-field', 'geometric-shapes', 'gradient', 'hangman', 'height-converter', 'hide-menu-onscroll', 'horse', 'image-comparisson', 'light', 'login-with-social-media', 'media-queries', 'modal-sign-up', 'multi-step-form', 'password-validation', 'popup-chat', 'progress', 'pseudo-element', 'registration', 'responsive-checkout', 'responsive-layout', 'search-menu', 'set-interval', 'set-timeout', 'site', 'social-media-icons', 'sort-list', 'squares', 'step-4', 'steps', 'sticky-social-bar', 'tip-calculator', 'todo-list', 'tooltip', 'tree', 'triangles', 'uno-dos', 'vertical-tabs'];
+		const data = ['accordion', 'animated-counter', 'animated-menu-icon', 'animated-search', 'animated-sidebar', 'arrows', 'autocomplete', 'bootstrap-carousel', 'calculator', 'caps-lock-check', 'cascading-dropdown', 'cocktail-form', 'collapsible', 'contact-form', 'counter', 'custom-select', 'cutout-text', 'dark-mode', 'dropdown', 'flip-card', 'form', 'full-page-tabs', 'game-field', 'geometric-shapes', 'gradient', 'height-converter', 'hide-menu-onscroll', 'horse', 'image-comparisson', 'light', 'login-with-social-media', 'media-queries', 'modal-sign-up', 'multi-step-form', 'password-validation', 'popup-chat', 'progress', 'pseudo-element', 'responsive-checkout', 'responsive-layout', 'search-menu', 'set-interval', 'set-timeout', 'site', 'social-media-icons', 'sort-list', 'squares', 'steps', 'sticky-social-bar', 'tip-calculator', 'todo-list', 'tooltip', 'tree', 'triangles', 'vertical-tabs'];
 
 		let links = document.querySelector(".links");
-		data.forEach((item, index) => {
-			let link = document.createElement("a");
-			link.setAttribute("href", `./projects/${item}.html`);
-			link.innerHTML = item.replace(/-/g, ' ');
-			link.setAttribute("class", "link text-uppercase btn col-2 d-flex align-items-center justify-content-center text-white fw-bold border-0 shadow");
-			link.setAttribute("target", "_blank");
-	
-			links.appendChild(link);
+		data.forEach((item) => {
+			links.innerHTML += `<a class="link text-uppercase btn col-2 d-flex align-items-center justify-content-center text-white fw-bold border-0 shadow" href="./projects/${item}.html" target="_blank">${item.replace(/-/g, ' ')}</a>`;
 		});
 
 	</script>
